@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # custom path pour avoir un path particulier pour les demandes de booking du locateur
+  resources :bookings do
+    get 'renter_bookings', to: 'renter_bookings'
+  end
 end
