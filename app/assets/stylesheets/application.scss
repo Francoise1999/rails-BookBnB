@@ -10,3 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.search-btn{
+  border-radius: 50%;
+
+  &:hover {
+    color: white;
+  }
+}
