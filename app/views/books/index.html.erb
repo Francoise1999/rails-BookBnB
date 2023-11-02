@@ -13,7 +13,11 @@
         <div class="book-details">
           <h5><%= book.title %></h5>
           <p><%= book.author %></p>
-          <p>10 <i class="fa-solid fa-dollar-sign"></i></p>
+          <p><%= book.price %> <i class="fa-solid fa-dollar-sign"></i></p>
+          <div class="books-links">
+            <%= link_to "Description", root_path %>
+            <%= link_to "Louer", root_path %>
+          </div>
         </div>
       </div>
     <% end %>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'books/new_book'
   devise_for :users
-  root to: "pages#home"
+  root to: "books#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :books, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:index, :new, :create]
