@@ -23,6 +23,12 @@
     color: white;
   }
 }
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 30px;
+}
 
 @media(max-width: 992px) {
   .cards {
@@ -34,11 +40,4 @@
   .cards {
     grid-template-columns: 1fr;
   }
-}
-
-.cards{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
-  margin-top: 30px;
 }
