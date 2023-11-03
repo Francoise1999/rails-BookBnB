@@ -1,13 +1,26 @@
+<div class="container mb-4">
+  <h1><%= @book.title %></h1>
+
+  <div class="book-show row">
+    <div class="img-book-show-div col-6">
+        <%= image_tag "https://images.unsplash.com/photo-1568819297129-80fd50360f8e?auto=format&fit=crop&q=80&w=1936&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Le Wagon", class: "img-book-show" %>
+    </div>
+    <div class="description-book-show col-6">
+        <%= @book.description %>
+    </div>
+  </div>
+
+</div>
+
 <p style="color: green"><%= notice %></p>
 
 
-<h1><%= @book.title %></h1>
 <p><%= @book.category %></p>
 
 
 <div>
   <%= link_to "Modifier les details de ton livre", edit_book_path(@book) %> |
-  <%= link_to "Retour a la page principale", book_path %>
+  <%= link_to "Retour a la page principale", root_path %>
 
   <%= button_to "Enlever ce livre de ta liste", @book, method: :delete %>
 </div>
