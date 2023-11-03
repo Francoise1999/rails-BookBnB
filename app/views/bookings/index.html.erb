@@ -1,1 +1,6 @@
 <%# view pour afficher la liste des books du owner %>
+<ul>
+  <% @bookings.each do |booking| %>
+  <li> <%= booking.date %> </li>
+  <% end %>
+</ul>
