@@ -14,9 +14,9 @@
           <h5><%= book.title %></h5>
           <p><%= book.author %></p>
           <p><%= book.price %> <i class="fa-solid fa-dollar-sign"></i></p>
-          <div class="books-links">
-            <%= link_to "Description", root_path %>
-            <%= link_to "Louer", root_path %>
+          <div class="books-links d-flex justify-content-between">
+            <%= link_to "Description", root_path, class: "btn button-6" %>
+            <%= link_to "Louer", root_path, class: "btn button-6" %>
           </div>
         </div>
       </div>
