@@ -1,8 +1,16 @@
 <h1>Editer les informations de ce livre</h1>
 
 
+   <%= simple_form_for(@book) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :author %>
+      <%= f.input :category %>
+      <%= f.input :year %>
+      <%= f.input :price %>
+      <%= f.submit %>
+    <% end %>
 
-<br>
 
 <div>
   <%= link_to "Montrer les details", @book_user_id %> |
