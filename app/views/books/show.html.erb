@@ -1,12 +1,13 @@
-<div class="container mb-4">
-  <h1><%= @book.title %></h1>
-
+<div class="container mb-4 pt-5">
   <div class="book-show row">
     <div class="img-book-show-div col-6">
-        <%= image_tag "https://images.unsplash.com/photo-1568819297129-80fd50360f8e?auto=format&fit=crop&q=80&w=1936&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Le Wagon", class: "img-book-show" %>
+        <%= image_tag "https://images.unsplash.com/photo-1568819297129-80fd50360f8e?auto=format&fit=crop&q=80&w=1936&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Le Wagon", class: "img-fluid img-book-show" %>
     </div>
-    <div class="description-book-show col-6">
-        <%= @book.description %>
+    <div class="description-book-show col-6 p-4 ">
+        <h2><%= @book.title %></h2>
+        <p><%= @book.author %></p>
+        <p><%= @book.description %></p>
+        <p><%= @book.price %><i class="fa-solid fa-dollar-sign"></i></p>
     </div>
   </div>
 
