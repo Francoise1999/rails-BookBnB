@@ -1,2 +1,7 @@
+<%= simple_form_for(@booking) do |f| %>
+      <%= f.input :date %>
+      <%= f.submit %>
+    <% end %>
+
 <%= link_to "Retour a la page principale", books_path %>
 <%= button_to "Enlever ce livre de ta liste", @book, method: :delete %>
