@@ -10,7 +10,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # custom path pour avoir un path particulier pour les demandes de booking du locateur
-  resources :bookings do
-    get 'renter_bookings', to: 'renter_bookings'
-  end
+    get 'owner_bookings', to: 'bookings#owner_bookings', as: :owner_bookings
 end

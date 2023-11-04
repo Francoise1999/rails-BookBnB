@@ -2,6 +2,6 @@
 <ul>
   <% @bookings.each do |booking| %>
   <%# on pourrait changer le bookin.user.id par le nom du user qui a fait la demande %>
-  <li> <%= "Emprunteur numero: #{booking.user.id} demande a emprunter le livre: #{booking.book.title}" %> <%= link_to "Voir la demande", booking_path(booking) %> </li>
+  <li> <%= "Vous avez demandé à emprunter le livre: #{booking.book.title} qui appartient à #{booking.book.user.id}" %> <%= link_to "Voir le livre", book_path(booking.book) %> </li>
   <% end %>
 </ul>
