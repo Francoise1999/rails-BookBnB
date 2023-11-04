@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "https://banner2.cleanpng.com/20180327/tpq/kisspng-scythe-don-t-get-caught-book-computer-icons-clip-a-store-shelf-5ab9e4f04332c2.4928392715221322082753.jpg" %>
     <% end %>
 
@@ -12,12 +12,9 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Accueil", "#", class: "nav-link" %>
+            <%= link_to "Mes demandes", bookings_path, class: "nav-link" %>
           </li>
 
-          <li class="nav-item">
-            <%= link_to "Louer", "#", class: "nav-link" %>
-          </li>
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
