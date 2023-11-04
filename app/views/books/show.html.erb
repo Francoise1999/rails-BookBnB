@@ -4,9 +4,12 @@
 <h1><%= @book.title %></h1>
 <p><%= @book.category %></p>
 <p><%= @book.price %></p>
+<p><%= @book.description %></p>
+
 
 <div>
-  <%= link_to "Modifier les details de ton livre", edit_book_path(@book) %> |
+  <% if @book.user == current_user %>
+  <%= link_to "Modifier la description de ton livre", edit_book_path(@book) %>
+  <% end %>
   <%= link_to "Retour a la page principale", books_path %>
-  <%= button_to "Enlever ce livre de ta liste", @book, method: :delete %>
 </div>
