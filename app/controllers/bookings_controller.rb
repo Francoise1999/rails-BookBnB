@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  # index des reservation pour le loueur
   def index
     @bookings = Booking.where(user: current_user)
   end
@@ -9,7 +10,8 @@ class BookingsController < ApplicationController
   def create
   end
 
+  # C'est comme un index des reservations mais pour le proprietaire des livres
   def renter_bookings
-    # a voir avec Christopher samedi
+    @bookings = Bookings.where(user: current_user)
   end
 end
