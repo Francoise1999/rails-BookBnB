@@ -16,6 +16,8 @@ puts "Deleted"
 
 puts "Creating books"
 
+user1 = User.create(email: 'veronique.tureau@gmail.com', password: 'bonjour')
+
 10.times do
-  Book.create(title: "My book", author: "Me", description: "My first book", category: "Story", year: 2023, price: 19)
+  Book.create(title: "My book", author: "Me", description: "My first book", category: "Story", year: 2023, price: 19, user: user1)
 end
