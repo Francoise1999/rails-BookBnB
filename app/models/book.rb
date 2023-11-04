@@ -7,4 +7,5 @@ class Book < ApplicationRecord
   validates :year, presence: true
   validates :price, presence: true
   has_many :bookings, dependent: :destroy
+  belongs_to :user
 end
