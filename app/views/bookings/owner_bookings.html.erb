@@ -1,6 +1,6 @@
 
 <ul>
-  <% @bookings.each do |booking| %>
-  <li> <%= "#{booking.user.email} a demandé à emprunter le livre: #{booking.book.title}" %> </li>
+  <% @owner_bookings.each do |owner_booking| %>
+  <li> <%= "#{owner_booking.user.email} a demandé à emprunter le livre: #{owner_booking.book.title}" %> </li>
   <% end %>
 </ul>

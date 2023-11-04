@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   # index des reservation pour le loueur
   def index
     @bookings = Booking.where(user: current_user)
+    @owner_bookings = current_user.owner_bookings
   end
 
   def new
@@ -23,9 +24,9 @@ class BookingsController < ApplicationController
   end
 
   # C'est comme un index des reservations mais pour le proprietaire des livres
-  def owner_bookings
-    @bookings = current_user.owner_bookings
-  end
+  # def owner_bookings
+  #   @owner_bookings = current_user.owner_bookings
+  # end
 
   private
 
