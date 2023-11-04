@@ -12,4 +12,5 @@
   <%= link_to "Modifier la description de ton livre", edit_book_path(@book) %>
   <% end %>
   <%= link_to "Retour a la page principale", books_path %>
+  <p><%= link_to "Louer", new_book_booking_path(@book) %></p>
 </div>
