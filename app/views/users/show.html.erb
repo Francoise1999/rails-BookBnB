@@ -11,8 +11,10 @@
       <h5>Password</h5>
       <p>************</p>
 
-      <button>Edit</button>
-      <button>Back</button>
+      <%= link_to "Edit", edit_user_path(current_user), class: "btn btn-secondary" %>
+      <%= link_to "Back", root_path, class: "btn btn-secondary" %>
+
+
     </div>
   </div>
 </div>
