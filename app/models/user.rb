@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_one :profile
   has_many :bookings, dependent: :destroy
   has_many :books, dependent: :destroy
   has_many :owner_bookings, through: :books, source: :bookings
