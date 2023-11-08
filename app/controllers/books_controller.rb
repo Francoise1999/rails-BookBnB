@@ -4,6 +4,9 @@ class BooksController < ApplicationController
   def index
     @user = current_user
     @books = Book.all
+    if params[:query].present?
+    @books = Book.search_by_title_and_description(params[:query])
+    end
   end
 
   def show
@@ -42,6 +45,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :description, :author, :category, :year, :price)
+    params.require(:book).permit(:title, :description, :author, :category, :year, :price, :photo)
   end
 end
