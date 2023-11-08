@@ -16,8 +16,8 @@ puts "Deleted"
 
 puts "Creating users"
 
-user1 = User.create(email: 'veronique.tureau@gmail.com', password: 'bonjour')
-user2 = User.create(email: 'my.mail@gmail.com', password: 'bonjour')
+user1 = User.create(name: "Vero", email: 'veronique.tureau@gmail.com', password: 'bonjour')
+user2 = User.create(name: "Paul", email: 'my.mail@gmail.com', password: 'bonjour')
 
 puts "Creating books"
 
@@ -30,6 +30,6 @@ end
 
 puts "Creating bookings"
 
-booking1 = Booking.create(date: Date.today, user: user1, book: book1)
-booking2 = Booking.create(date: Date.today, user: user2, book: book2)
-booking3 = Booking.create(date: Date.today, user: user1, book: book2)
+booking1 = Booking.create(date: Date.today, user: user1, book: book1, accepted: false)
+booking2 = Booking.create(date: Date.today, user: user2, book: book2, accepted: false)
+booking3 = Booking.create(date: Date.today, user: user1, book: book2, accepted: false)

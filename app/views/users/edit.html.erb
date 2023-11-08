@@ -1,0 +1,10 @@
+<h1>Edit your profile</h1>
+
+<%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid" %>
+
+<%= simple_form_for(@user) do |f| %>
+
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Edit your profile image" %>
+
+<% end %>

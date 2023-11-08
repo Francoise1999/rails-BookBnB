@@ -4,9 +4,13 @@ Rails.application.routes.draw do
   root to: "books#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :books, only: [:index, :show, :new, :create, :edit, :update] do
-    resources :bookings, only: [:new, :create, :edit]
+    resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index, ]
+
+  resources :users, only: [:show, :edit, :update]
+
+  resources :bookings, only: [:index, :edit, :update]
+
   # Defines the root path route ("/")
   # root "articles#index"
 
