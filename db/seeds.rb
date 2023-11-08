@@ -16,8 +16,8 @@ puts "Deleted"
 
 puts "Creating users"
 
-user1 = User.create(email: 'veronique.tureau@gmail.com', password: 'bonjour')
-user2 = User.create(email: 'my.mail@gmail.com', password: 'bonjour')
+user1 = User.create(name: "Vero", email: 'veronique.tureau@gmail.com', password: 'bonjour')
+user2 = User.create(name: "Paul", email: 'my.mail@gmail.com', password: 'bonjour')
 
 puts "Creating books"
 
