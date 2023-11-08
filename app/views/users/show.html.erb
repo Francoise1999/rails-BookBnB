@@ -2,7 +2,8 @@
   <h1 class="my-5 text-center">Your profil</h1>
   <div class="row">
     <div class="col-6">
-      <%= image_tag "none_image_user", alt: "Le Wagon", class: "img-fluid" %>
+      <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid" %>
+
     </div>
     <div class="col-6 ps-5">
       <h5>Email</h5>
