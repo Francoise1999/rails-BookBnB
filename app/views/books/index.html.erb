@@ -5,7 +5,13 @@
           <button class="search-btn btn btn-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
   </div>
-  <h2>All Books</h2>
+  <h4>
+    Hello
+    <% if user_signed_in? %>
+    <%= current_user.name %>
+    <% end %>
+  </h4>
+
   <div class="cards">
     <% @books.each do |book| %>
       <div class="card">
