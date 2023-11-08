@@ -23,6 +23,17 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to bookings_path
+    end
+  end
+
   # C'est comme un index des reservations mais pour le proprietaire des livres
   # def owner_bookings
   #   @owner_bookings = current_user.owner_bookings
@@ -31,6 +42,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:date, :accepted)
   end
 end

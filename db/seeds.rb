@@ -30,6 +30,6 @@ end
 
 puts "Creating bookings"
 
-booking1 = Booking.create(date: Date.today, user: user1, book: book1)
-booking2 = Booking.create(date: Date.today, user: user2, book: book2)
-booking3 = Booking.create(date: Date.today, user: user1, book: book2)
+booking1 = Booking.create(date: Date.today, user: user1, book: book1, accepted: false)
+booking2 = Booking.create(date: Date.today, user: user2, book: book2, accepted: false)
+booking3 = Booking.create(date: Date.today, user: user1, book: book2, accepted: false)

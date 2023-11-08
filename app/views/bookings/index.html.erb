@@ -1,10 +1,19 @@
 <div class="container card m-5 booking p-4">
 
-  <h3>Mes demandes d'emprunt</h3>
+  <h3>My books bookings</h3>
   <ul>
     <% @bookings.each do |booking| %>
     <%# on pourrait changer le bookin.user.id par le nom du user qui a fait la demande %>
-    <li> <%= "Vous avez demandé à emprunter le livre: #{booking.book.title} qui appartient à #{booking.book.user.email}" %> <%= link_to "Voir le livre", book_path(booking.book) %> </li>
+    <li>
+      <%= "You asked for the book: #{booking.book.title}, owned by #{booking.book.user.email}" %> <%= link_to "See the book", book_path(booking.book) %>
+      <p>
+        <% if booking.accepted == true %>
+          <%= "Status: Accepted" %>
+        <% else %>
+          <%= "Status: pending" %>
+        <% end %>
+      </p>
+    </li>
     <% end %>
   </ul>
 
@@ -12,10 +21,10 @@
 
 <div class="container card m-5 booking p-4">
 
-  <h3>Demandes de locations en attente</h3>
+  <h3>Bookings waiting for approuval</h3>
   <ul>
     <% @owner_bookings.each do |owner_booking| %>
-    <li> <%= "#{owner_booking.user.email} a demandé à emprunter le livre: #{owner_booking.book.title}" %> <%= link_to "Accepter/refuser", "#" %></li>
+    <li> <%= "#{owner_booking.user.email} asked the book: #{owner_booking.book.title}" %> <%= link_to "Accept",  edit_booking_path(owner_booking) %></li>
     <% end %>
   </ul>
 
