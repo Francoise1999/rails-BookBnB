@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-
+<%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
 <h1><%= @book.title %>, <%= @book.author %></h1>
 <p>Category: <%= @book.category %></p>
 <p>Description: <%= @book.description %></p>
@@ -9,8 +9,8 @@
 
 <div>
   <% if @book.user == current_user %>
-  <%= link_to "Modifier la description de ton livre", edit_book_path(@book) %>
+  <%= link_to "Update your description", edit_book_path(@book) %>
   <% end %>
-  <%= link_to "Retour a la page principale", books_path %>
-  <p><%= link_to "Louer", new_book_booking_path(@book) %></p>
+  <%= link_to "Main page", books_path %>
+  <p><%= link_to "Rent this book", new_book_booking_path(@book) %></p>
 </div>
