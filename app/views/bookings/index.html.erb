@@ -1,6 +1,30 @@
-<%# view pour afficher la liste des books du owner %>
-<ul>
-  <% @bookings.each do |booking| %>
-  <li> <%= booking.date %> </li>
-  <% end %>
-</ul>
+<div class="container card m-5 booking p-4">
+
+  <h3>My books bookings</h3>
+  <ul>
+    <% @bookings.each do |booking| %>
+    <li>
+      <%= "You asked for the book: #{booking.book.title}, owned by #{booking.book.user.name}" %> <%= link_to "See the book", book_path(booking.book) %>
+      <p>
+        <% if booking.accepted == true %>
+          <%= "Status: Accepted" %>
+        <% else %>
+          <%= "Status: pending" %>
+        <% end %>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+
+</div>
+
+<div class="container card m-5 booking p-4">
+
+  <h3>Bookings waiting for approuval</h3>
+  <ul>
+    <% @owner_bookings.each do |owner_booking| %>
+    <li> <%= "#{owner_booking.user.name} asked the book: #{owner_booking.book.title}" %> <%= link_to "Accept",  edit_booking_path(owner_booking) %></li>
+    <% end %>
+  </ul>
+
+</div>

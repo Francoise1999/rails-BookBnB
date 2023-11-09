@@ -16,12 +16,17 @@
 <p style="color: green"><%= notice %></p>
 
 
-<p><%= @book.category %></p>
+<%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
+<h1><%= @book.title %>, <%= @book.author %></h1>
+<p>Category: <%= @book.category %></p>
+<p>Description: <%= @book.description %></p>
+<p><%= @book.price %>$</p>
 
 
 <div>
-  <%= link_to "Modifier les details de ton livre", edit_book_path(@book) %> |
-  <%= link_to "Retour a la page principale", root_path %>
-
-  <%= button_to "Enlever ce livre de ta liste", @book, method: :delete %>
+  <% if @book.user == current_user %>
+  <%= link_to "Update your description", edit_book_path(@book) %>
+  <% end %>
+  <%= link_to "Main page", books_path %>
+  <p><%= link_to "Rent this book", new_book_booking_path(@book) %></p>
 </div>
