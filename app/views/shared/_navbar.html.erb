@@ -15,15 +15,11 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-
             <%= link_to "Home", books_path, class: "nav-link" %>
           </li>
 
           <li class="nav-item">
             <%= link_to "Add your Book",new_book_path , class: "nav-link" %>
-          </li>
-
-
           </li>
 
           <li class="nav-item dropdown">
