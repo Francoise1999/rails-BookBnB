@@ -1,13 +1,18 @@
 <div class="container mb-4 pt-5">
   <div class="book-show row">
-    <div class="img-book-show-div col-6">
-        <%= image_tag "https://images.unsplash.com/photo-1568819297129-80fd50360f8e?auto=format&fit=crop&q=80&w=1936&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Le Wagon", class: "img-fluid img-book-show" %>
-    </div>
+
     <div class="description-book-show col-6 p-4 ">
-        <h2><%= @book.title %></h2>
-        <p><%= @book.author %></p>
-        <p><%= @book.description %></p>
-        <p><%= @book.price %><i class="fa-solid fa-dollar-sign"></i></p>
+    <% if @book.photo.key? %>
+        <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1568819297129-80fd50360f8e?auto=format&fit=crop&q=80&w=1936&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Le Wagon", class: "img-book" %>
+      <% end %>
+
+<h1><strong><%= @book.title %>, <%= @book.author %></strong></h1>
+<h3>Category: <%= @book.category %></h3>
+<p>Description: <%= @book.description %></p>
+<p><%= @book.price %>$</p>
+
     </div>
   </div>
 
@@ -16,11 +21,6 @@
 <p style="color: green"><%= notice %></p>
 
 
-<%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
-<h1><%= @book.title %>, <%= @book.author %></h1>
-<p>Category: <%= @book.category %></p>
-<p>Description: <%= @book.description %></p>
-<p><%= @book.price %>$</p>
 
 
 <div>
