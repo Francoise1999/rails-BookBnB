@@ -1,11 +1,11 @@
 <div class="container">
-  <h1 class="my-5 text-center">Your profil</h1>
+  <h1 class="my-5 text-center">Your profile</h1>
   <div class="row">
     <div class="col-6">
       <% if current_user.photo.key? %>
-        <%= cl_image_tag current_user.photo.key, class: "img-fluid",  alt: "dropdown menu"%>
+        <%= cl_image_tag current_user.photo.key, class: "img-fluid", width: 500, crop: :fill, alt: "dropdown menu"%>
       <% else %>
-        <%= image_tag "none_image_user.png", class: "img-fluid" %>
+        <%= image_tag "none_image_user.png", class: "img-fluid", width: 500 %>
       <% end %>
       <%# <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid" %>
 
