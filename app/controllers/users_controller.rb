@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to @user, notice: 'Image de profil mise à jour avec succès.'
+      redirect_to @user, notice: 'Mise à jour complétée avec succès.'
     else
       render :edit
     end
@@ -19,6 +19,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:photo)
+    params.require(:user).permit(:photo, :name)
   end
 end
