@@ -9,7 +9,10 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
+
+    @user.assign_attributes(user_params.except(:password))
+    @user.assign_attributes(user_params.except(:password_confirmation))
+    if @user.save(validate: false)
       redirect_to @user, notice: 'Mise à jour complétée avec succès.'
     else
       render :edit
@@ -19,6 +22,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:photo, :name)
+    params.require(:user).permit(:photo, :name, :password, :password_confirmation)
   end
 end
