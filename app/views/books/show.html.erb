@@ -1,11 +1,19 @@
+<div class="container mb-4 pt-5">
+  <div class="book-show row">
+    <div class="img-book-show-div col-6">
+        <%= cl_image_tag @book.photo.key, height: 300, width: 400, class: "img-fluid img-book-show" %>
+    </div>
+    <div class="description-book-show col-6 p-4 ">
+        <h2><%= @book.title %></h2>
+        <p><%= @book.author %></p>
+        <p><%= @book.description %></p>
+        <p><%= @book.price %><i class="fa-solid fa-dollar-sign"></i></p>
+    </div>
+  </div>
+
+</div>
+
 <p style="color: green"><%= notice %></p>
-
-<%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
-<h1><%= @book.title %>, <%= @book.author %></h1>
-<p>Category: <%= @book.category %></p>
-<p>Description: <%= @book.description %></p>
-<p><%= @book.price %>$</p>
-
 
 <div>
   <% if @book.user == current_user %>
