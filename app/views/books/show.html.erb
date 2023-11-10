@@ -1,6 +1,12 @@
 <div class="container mb-4 pt-5">
   <div class="book-show row">
+<<<<<<< HEAD
 
+=======
+    <div class="img-book-show-div col-6">
+        <%= cl_image_tag @book.photo.key, height: 300, width: 400, class: "img-fluid img-book-show" %>
+    </div>
+>>>>>>> 2092f3f254319df105e8812eab7877c9d6a6b177
     <div class="description-book-show col-6 p-4 ">
     <% if @book.photo.key? %>
         <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
@@ -20,9 +26,12 @@
 
 <p style="color: green"><%= notice %></p>
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 2092f3f254319df105e8812eab7877c9d6a6b177
 <div>
   <% if @book.user == current_user %>
   <%= link_to "Update your description", edit_book_path(@book) %>

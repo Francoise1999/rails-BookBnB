@@ -25,7 +25,7 @@
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <% if current_user.photo.key? %>
-                <%= cl_image_tag current_user.photo.key, class: "avatar",  alt: "dropdown menu"%>
+                <%= cl_image_tag current_user.photo.key, class: "avatar", width: 500, alt: "dropdown menu"%>
               <% else %>
                 <%= image_tag "none_image_user.png", class: "avatar" %>
               <% end %>
