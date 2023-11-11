@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: "books#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :books, only: [:index, :show, :new, :create, :edit, :update] do
+  resources :books, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :bookings, only: [:new, :create]
   end
 
