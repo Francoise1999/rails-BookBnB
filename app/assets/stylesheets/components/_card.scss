@@ -3,6 +3,9 @@
 }
 .img-book{
   object-fit: fill;
+  height: 300;
+  width: 400;
+  aspect-ratio: auto 400 / 300;
 }
 
 .book-details{
