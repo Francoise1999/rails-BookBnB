@@ -1,15 +1,26 @@
 .card{
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .img-book{
   object-fit: fill;
-  height: 300;
-  width: 400;
+  min-height: 300px;
+  width: 100%;
   aspect-ratio: auto 400 / 300;
 }
 
 .book-details{
+  height: 40%;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.books-links{
+  margin-top: 20px;
 }
 
 .booking {
