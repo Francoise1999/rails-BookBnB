@@ -15,6 +15,5 @@ pg_search_scope :search_by_title_and_author,
   has_many :bookings, dependent: :destroy
   belongs_to :user
   has_one_attached :photo
-  validates :photo, presence: true
 
 end

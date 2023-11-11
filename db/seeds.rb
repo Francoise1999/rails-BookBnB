@@ -44,7 +44,7 @@ book2 = Book.create(title: "The Buddhist Chef's Homestyle Cooking",
   price: 15,
   user: paul)
 
-book3 = Book.create(title: "Harry Potter and the Philosopher's Stone",
+book3 = Book.create!(title: "Harry Potter and the Philosopher's Stone",
   author: "J.K. Rowling",
   description: "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin! These new editions of the classic and internationally bestselling, multi-award-winning series feature instantly pick-up-able new jackets by Jonny Duddle, with huge child appeal, to bring Harry Potter to the next generation of readers. It's time to PASS THE MAGIC ON ...",
   category: "Fiction",
@@ -52,13 +52,14 @@ book3 = Book.create(title: "Harry Potter and the Philosopher's Stone",
   price: 11,
   user: marie)
 
-book4 = Book.create(title: "Beren and Lúthien",
+book4 = Book.create!(title: "Beren and Lúthien",
   author: "J. R. R. Tolkien",
   description: "Painstakingly restored from Tolkien's manuscripts and presented for the first time as a continuous and standalone story, the epic tale of Beren and Luthien will reunite fans of The Hobbit and The Lord of the Rings with Elves and Men, Dwarves and Orcs and the rich landscape and creatures unique to Tolkien's Middle-earth.",
   category: "Fiction",
   year: 2017,
   price: 24,
   user: michael)
+
 
 traitors_gate = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582774/development/tzhyysze78xjd0ko0547llvnqcwz.jpg")
 the_buddhist_chefs_homestyle_cooking = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582774/development/9tq2oy7bhct58fxkh5uflzoea29n.jpg")
