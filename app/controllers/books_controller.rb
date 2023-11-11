@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     @user = current_user
     @books = Book.all
     if params[:query].present?
-    @books = Book.search_by_title_and_description(params[:query])
+    @books = Book.search_by_title_and_author(params[:query])
     end
   end
 
