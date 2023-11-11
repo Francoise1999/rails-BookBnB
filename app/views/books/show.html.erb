@@ -2,7 +2,7 @@
   <div class="book-show row">
     <div class="description-book-show col-6 p-4 ">
       <% if @book.photo.key? %>
-        <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @book.photo.key, height: 400 %>
       <% else %>
         <%= image_tag "https://images.unsplash.com/photo-1568819297129-80fd50360f8e?auto=format&fit=crop&q=80&w=1936&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Le Wagon", class: "img-book" %>
       <% end %>

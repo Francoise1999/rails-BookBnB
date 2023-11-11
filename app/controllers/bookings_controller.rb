@@ -34,6 +34,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+
+    redirect_to bookings_path, status: :see_other
+  end
+
   # C'est comme un index des reservations mais pour le proprietaire des livres
   # def owner_bookings
   #   @owner_bookings = current_user.owner_bookings
