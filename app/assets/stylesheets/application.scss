@@ -10,6 +10,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+body {
+  font-family: 'Gilda Display', serif;
+}
 
 .search_bar{
   padding: 30px;
