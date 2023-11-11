@@ -60,10 +60,10 @@ book4 = Book.create(title: "Beren and Lúthien",
   price: 24,
   user: michael)
 
-traitors_gate = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699580731/ycubboo7d4wjyizdjxbe.jpg")
-the_buddhist_chefs_homestyle_cooking = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699580869/xydj2iffq7vyuzqizxox.jpg")
-harry_potter = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582066/a2zs9brvwgcnsvmnd2jl.jpg")
-beren_and_luthien= URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582325/apl5hleu5xf01vefglax.jpg")
+traitors_gate = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582774/development/tzhyysze78xjd0ko0547llvnqcwz.jpg")
+the_buddhist_chefs_homestyle_cooking = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582774/development/9tq2oy7bhct58fxkh5uflzoea29n.jpg")
+harry_potter = URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582775/development/mzzdwvoyd8j8zzfpqoufflwx6knr.jpg")
+beren_and_luthien= URI.open("https://res.cloudinary.com/devskqpiz/image/upload/v1699582776/development/mpp9cuwpgwhyz13czxpug3hx9xfk.jpg")
 
 book1.photo.attach(io: traitors_gate, filename: "book1.png", content_type: "image/png")
 book2.photo.attach(io: the_buddhist_chefs_homestyle_cooking, filename: "book2.png", content_type: "image/png")
